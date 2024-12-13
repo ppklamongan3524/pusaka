@@ -1,0 +1,424 @@
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg,  #161D6F 0%, #74ebd5 100%);
+    padding-top: 78px; /* Memberikan padding untuk menghindari konten tertutup header */
+}
+
+.header {
+    background: linear-gradient(135deg,  #ffffff 50%,#161D6F 30%);
+    color: black;
+    padding: 20px 0;
+    position: fixed; /* Membuat header tetap di tempat */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Agar header selalu berada di atas konten lainnya */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul li {
+    position: relative;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.2vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav ul li a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+.card {
+    text-align: center;
+}
+.card img {
+    width: 100%;  /* Memastikan gambar mengambil lebar penuh */
+}
+.card-1, .card-2 {
+    background-color: #ffffff;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 20px;
+    margin: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 
+        transform 0.3s ease-in-out, 
+        box-shadow 0.3s ease-in-out, 
+        background-color 0.3s ease-in-out;
+}
+
+.card-1 li, .card-2 li {
+    list-style-type: decimal;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.card-1 li a, .card-2 li a {
+    color: #b26262;
+}
+
+.card-1 p, .card-2 p {
+    margin-bottom: 20px; /* Jarak antara paragraf dan daftar */
+}
+
+.collapsible-container {
+    padding-left:50px;
+    padding-right: 50px;
+}
+/* Collapsible button styling */
+.collapsible {
+    background-color: #0B2F9F;
+    color: white;
+    cursor: pointer;
+    padding-left:70px;
+    padding-right:70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapsible:hover {
+    background-color: #161D6F;
+}
+
+.arrow {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Collapsible content styling */
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #ffffff;
+    
+    border-radius: 20px;
+}
+
+/* Membesarkan gambar dalam collapsible */
+.dropdown-image {
+    width: 100%;             /* Memenuhi lebar kontainer */
+    max-width: 800px;         /* Ukuran maksimum gambar */
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk efek estetika */
+}
+
+.pemisah-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-image: url('pemisah.png');
+    background-size: 100%; /* Atau gunakan contain jika ingin gambar sepenuhnya terlihat */
+    background-position: center; /* Pusatkan gambar jika menggunakan cover */
+    background-repeat: no-repeat; /* Jangan ulangi gambar latar belakang */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 20px;
+}
+
+.kata, .kosong {
+    width: 50%; /* Masing-masing div mengambil 50% dari lebar kontainer */
+    padding: 60px;
+}
+
+.kata h6 {
+    font-size: 1.2rem;
+    color: #4a7dd5;
+    font-style: oblique;
+}
+
+.kata h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-style: oblique;
+}
+
+.card-4 {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    text-align: center;
+    background-color:#ffffff;
+}
+
+.collapsible-container-grid {
+    display: flex;
+    flex-wrap: wrap; /* Membuat elemen menjadi lebih dari satu baris */
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding-bottom: 30px;
+}
+
+.collapsible-item {
+    flex: 1 1 calc(50% - 20px); /* Membuat dua kolom dengan jarak */
+    margin: 10px;
+}
+.collapsible-2 {
+    background-color:  #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding-left:70px;
+    padding-right:70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Garis bawah untuk teks */
+.collapsible-2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 70px; /* Sesuaikan dengan padding kiri jika perlu */
+    right: 70px; /* Sesuaikan dengan padding kanan jika perlu */
+    bottom: 0;
+    height: 2px; /* Ketebalan garis */
+    background-color: #161D6F; /* Warna garis bawah */
+}
+
+.hamburger {
+    display: none;
+}
+
+/* Kelas aktif yang memindahkan nav ul ke dalam layar */
+.nav ul.active {
+    left: 0; /* Muncul dari kiri */
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 48px;
+    }
+    .header {
+        padding: 10px 0;
+        position: fixed; /* Membuat header tetap di tempat */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000; 
+    }
+
+    .container {
+        padding: 0 30px; /* Mengurangi padding di samping */
+    }
+
+    .nav ul {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Awalnya di luar layar */
+        width: 250px; /* Lebar menu saat muncul */
+        height: 100%;
+        background-color: #161D6F;
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        transition: left 0.3s ease; /* Efek transisi saat muncul */
+        z-index: 1000; /* Supaya menu berada di atas konten lainnya */
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .nav ul li a {
+        color: white;
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem; /* Sesuaikan dengan ukuran yang diinginkan */
+    }
+
+    /* Perkecil ukuran gambar logo */
+    .logo img {
+        width: 30px; /* Atur ukuran gambar logo lebih kecil */
+    }
+
+    /* Tampilkan hamburger */
+    .hamburger {
+        display: block;
+        font-size: 20px;
+        background: none;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        z-index: 1001; /* Di atas menu navigasi */
+    }
+
+    .card-1, .card-2 {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 20px;
+    }
+
+    .card-1 p, .card-2 p {
+        font-size: 0.6rem; /* Mengurangi ukuran font paragraf */
+        margin-bottom: 5px;
+    }
+
+    .card-1 li, .card-2 li {
+        font-size: 0.6rem; /* Mengurangi ukuran font daftar */
+        margin-bottom: 2px;
+    }
+
+    .collapsible-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .collapsible {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 0.8rem;
+        margin-top: 5px; /* Jarak antar collapsible saat di layar kecil */
+    }
+
+    .arrow {
+        font-size: 16px;
+    }
+
+    .content {
+        padding: 0 10px; /* Mengurangi padding konten collapsible */
+    }
+
+    .dropdown-image {
+        max-width: 100%; /* Menyesuaikan lebar gambar dengan lebar layar */
+        margin: 10px 0; /* Mengurangi margin gambar */
+    }
+
+    .pemisah-container {
+        flex-direction: column; /* Ubah tata letak menjadi kolom */
+        padding: 20px; /* Kurangi padding agar lebih cocok di layar kecil */
+        background-size: 100%; /* Pastikan gambar background menyesuaikan ukuran kontainer */
+        text-align: left; /* Pusatkan teks pada layar kecil */
+    }
+
+    .kata, .kosong {
+        width: 100%; /* Masing-masing div mengambil lebar penuh */
+        padding-left: 20px;
+        padding-right: 250px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .kata h6 {
+        font-size: 0.2rem; /* Sesuaikan ukuran font lebih kecil */
+        color: #4a7dd5;
+        font-style: oblique;
+    }
+
+    .kata h3 {
+        font-size: 0.4rem; /* Ukuran font lebih kecil */
+        color: #ffffff;
+        font-style: oblique;
+    }
+
+    .card-4 {
+        font-size: 0.6rem;
+        padding-top: 40px;
+    }
+
+    .collapsible-container-grid {
+        padding-bottom: 20px; /* Mengurangi padding bawah untuk layar kecil */
+    }
+
+    .collapsible-item {
+        flex: 1 1 calc(100% - 20px); /* Membuat satu kolom dengan jarak */
+        margin: 10px;
+    }
+
+    .collapsible-2 {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .collapsible-2::after {
+        left: 20px; /* Sesuaikan dengan padding kiri */
+        right: 20px; /* Sesuaikan dengan padding kanan */
+    }
+}

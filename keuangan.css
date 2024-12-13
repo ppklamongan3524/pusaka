@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    padding-top: 78px; /* Memberikan padding untuk menghindari konten tertutup header */
+}
+
+.header {
+    background: linear-gradient(135deg,  #ffffff 50%,#161D6F 30%);
+    color: black;
+    padding: 20px 0;
+    position: fixed; /* Membuat header tetap di tempat */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Agar header selalu berada di atas konten lainnya */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul li {
+    position: relative;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.2vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav ul li a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.card1 {
+    padding-top: 90px;
+    padding-bottom: 250px;
+    padding-left: 100px;
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar elemen */
+    background-image: url('bg_body.png');
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat; /* Mencegah gambar berulang */
+}
+
+.card-image-container1 {
+    width: 50%;
+    height: 300px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #767b8a;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.card-image1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.kosong {
+    margin-top: 10px;
+}
+
+.kosong a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.kosong h3 {
+    margin-left: 175px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 5px 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kosong a:hover h3 {
+    color: #ffffff;
+    background-color: #000000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.employe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 15vh;
+    padding-top: 30px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.employe h1 {
+    color: #000000;
+    padding-right: 70px;
+    padding-left: 70px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 2vw;
+    font-family:cursive;
+    font-style: oblique;
+}
+
+.employe a {
+    color: #666;
+}
+
+.card-employe-container {
+    display: flex;
+    flex-wrap: wrap; /* Membungkus elemen ke baris baru */
+    justify-content: space-between; /* Menyebar card secara merata dengan jarak antar card */
+    align-items: flex-start; /* Menyelaraskan item di awal baris */
+    gap: 20px; /* Jarak antar card */
+    margin: 20px 0;
+    padding: 0 100px; /* Padding horizontal untuk mencegah card menempel ke tepi layar */
+   
+}
+
+/* Setiap card-employe */
+.card-employe, .card-employe2 {
+    flex-basis: calc(25% - 20px); /* Lebar card tetap 25% dari container dengan jarak 20px */
+    background-color: #ffffff;
+    text-align: center;
+    padding: 2px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    min-height: 350px; /* Atur tinggi minimum untuk memastikan ukuran box seragam */
+    display: flex;
+    flex-direction: column; /* Untuk menyusun konten secara vertikal */
+    justify-content: space-between; /* Menyebar konten di dalam card */
+}
+
+.card-employe:hover, .card-employe2:hover {
+    transform: translateY(-15px); /* Mengangkat card sedikit saat hover */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar saat hover */
+    cursor: pointer;
+}
+
+/* Gambar dalam card-employe */
+.card-employe img, .card-employe2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Styling untuk judul dan paragraf dalam card-employe */
+.card-employe h2, .card-employe2 h2 {
+    color: #19a6e8;
+    margin-top: 10px;
+    font-weight: bold;
+    min-height: 40px; /* Atur tinggi minimum untuk judul agar seragam */
+}
+
+.card-employe p, .card-employe2 p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+    padding: 0 10px;
+    flex-grow: 1; /* Buat paragraf mengambil ruang yang tersisa untuk menjaga konsistensi */
+}
+
+.card-employe a, .card-employe2 a {
+    text-decoration: none;
+}
+
+
+.card-employe-container2 {
+    display: flex;
+    flex-wrap: wrap; /* Membungkus elemen ke baris baru */
+    justify-content: center;
+    align-items: flex-start; /* Menyelaraskan item di awal baris */
+    gap: 20px; /* Jarak antar card */
+    margin: 20px 0;
+    padding: 0 100px; /* Padding horizontal untuk mencegah card menempel ke tepi layar */ 
+}
+
+.hamburger {
+    display: none;
+}
+
+/* Kelas aktif yang memindahkan nav ul ke dalam layar */
+.nav ul.active {
+    left: 0; /* Muncul dari kiri */
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 45px; /* Memberikan padding untuk menghindari konten tertutup header */
+    }
+    .header {
+        padding: 10px 0;
+        position: fixed; /* Membuat header tetap di tempat */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000; 
+    }
+
+    .container {
+        padding: 0 30px; /* Mengurangi padding di samping */
+    }
+
+    .nav ul {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Awalnya di luar layar */
+        width: 250px; /* Lebar menu saat muncul */
+        height: 100%;
+        background-color: #161D6F;
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        transition: left 0.3s ease; /* Efek transisi saat muncul */
+        z-index: 1000; /* Supaya menu berada di atas konten lainnya */
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .nav ul li a {
+        color: white;
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem; /* Sesuaikan dengan ukuran yang diinginkan */
+    }
+
+    /* Perkecil ukuran gambar logo */
+    .logo img {
+        width: 30px; /* Atur ukuran gambar logo lebih kecil */
+    }
+
+    /* Tampilkan hamburger */
+    .hamburger {
+        display: block;
+        font-size: 20px;
+        background: none;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        z-index: 1001; /* Di atas menu navigasi */
+    }
+
+    .card1 {
+        padding-top: 40px;
+        padding-bottom: 70px;
+        padding-left: 20px;
+    }
+
+    .card-image-container1 {
+        width: 40%;
+        height: auto; /* Menyesuaikan tinggi kontainer dengan konten */
+        margin-right: 0; /* Menghilangkan margin di kanan */
+    }
+
+    .card-image1 {
+        height: auto; /* Memastikan gambar tidak terdistorsi */
+    }
+
+    .kosong {
+        margin-top: 5px;
+        margin-left: 25px;
+    }
+
+    .kosong h3 {
+        margin-left: 0;
+        font-size: 0.4rem; /* Ukuran font lebih kecil di layar kecil */
+        padding: 5px 20px; /* Padding lebih besar */
+    }
+
+    .employe {
+        padding-top: 20px;
+    }
+
+    .employe h1 {
+        font-size: 0.8rem; /* Ukuran font lebih besar untuk keterbacaan di layar kecil */
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .employe a {
+        font-size: 0.6rem;
+    }
+
+    .employe h2 {
+        font-size: 0.8rem;
+        margin-top: 0px;
+    }
+
+    .employe p {
+        font-size: 0.6rem;
+        margin-top: 0px;
+    }
+
+    .card-employe-container {
+        padding: 0 70px; /* Mengurangi padding horizontal di layar kecil */
+    }
+
+    .card-employe {
+        flex-basis: calc(50% - 20px); /* Lebar card menjadi 50% dari container di layar kecil */
+        min-height: 250px; /* Mengurangi tinggi minimum card */
+    }
+
+    .card-employe-container2 {
+        padding: 0 70px; /* Mengurangi padding horizontal di layar kecil */
+        display: flex;
+        flex-wrap: wrap; /* Membungkus elemen ke baris baru */
+        justify-content: space-between; 
+    }
+    
+    .card-employe2 {
+        flex-basis: calc(50% - 20px); /* Lebar card menjadi 50% dari container di layar kecil */
+        min-height: 250px; /* Mengurangi tinggi minimum card */
+    }
+}
